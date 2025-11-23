@@ -49,7 +49,7 @@ public class TwoSum {
         int target = 10;
         var res = twoSum.twoSumTwoPointers(nums, target);
         var result = twoSum.twoSumHashMap(nums, target);
-        System.out.println(res[0] + " " + res[1] + "Time Complexity : O(nlogn) - Space Complexity : O(n)");
-        System.out.println(result[0] + " " + result[1]+ "Time Complexity : O(n) - Space Complexity : O(n)");
+        System.out.println(res[0] + " " + res[1] + " Time Complexity : O(nlogn) - Space Complexity : O(n)");
+        System.out.println(result[0] + " " + result[1]+ " Time Complexity : O(n) - Space Complexity : O(n)");
     }
 }
