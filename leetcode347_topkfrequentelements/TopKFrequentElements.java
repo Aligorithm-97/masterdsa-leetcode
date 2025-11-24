@@ -42,6 +42,31 @@ public class TopKFrequentElements {
 
     }
 
+    public int[] topKFrequentBucketSort(int[] nums, int k){
+        Map<Integer,Integer> count = new HashMap<>();
+        List<Integer>[] freq = new List[nums.length + 1];
+        for (int i = 0; i < freq.length; i++) {
+            freq[i] = new ArrayList<>();
+        }
+        for (int n:nums){
+            count.put(n, count.getOrDefault(n,0)+1);
+        }
+        for (Map.Entry<Integer,Integer> entry:count.entrySet()){
+            freq[entry.getValue()].add(entry.getKey());
+        }
+        int[] res = new int[k];
+        int index = 0;
+        for (int i = freq.length-1; i > 0 && index<k ; i--) {
+            for (int n :freq[i]){
+                res[index++] = n;
+                if (index == k){
+                    return res;
+                }
+            }
+        }
+        return res;
+    }
+
 
     public static void main(String[] args) {
         int[] nums = {1,2,2,3,3,3};
@@ -49,8 +74,10 @@ public class TopKFrequentElements {
         TopKFrequentElements topKFrequentElements = new TopKFrequentElements();
         int[] ints = topKFrequentElements.topKFrequentSorting(nums, k);
         int[] intsMin = topKFrequentElements.topKFrequentMinHeap(nums, k);
+        int[] intsBucket = topKFrequentElements.topKFrequentBucketSort(nums, k);
         System.out.println(ints[0] + " " + ints[1]);
         System.out.println(intsMin[0] + " " + intsMin[1]);
+        System.out.println(intsBucket[0] + " " + intsBucket[1]);
 
     }
 }
