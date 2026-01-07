@@ -38,20 +38,30 @@ public class ContainsDuplicate{
         return false;
     }
 
+    public boolean hasDuplicateSolution(int[] nums) {
+        Set<Integer> setS = new HashSet<>();
+        for (int num : nums) {
+            setS.add(num);
+        }
+        return setS.size() < nums.length;
+    }
+
     public boolean hasDuplicateHashSetLength(int[] nums) {
         return Arrays.stream(nums).distinct().count() < nums.length;
     }
 
     public static void main(String[] args) {
         ContainsDuplicate containsDuplicate = new ContainsDuplicate();
-        int[] nums = {1,2,3,4,4};
+        int[] nums = {1,2,3,4};
         boolean resultBruteForce = containsDuplicate.hasDuplicateBruteForce(nums);
         boolean resultSort = containsDuplicate.hasDuplicateSort(nums);
         boolean result = containsDuplicate.hasDuplicateHashSet(nums);
         boolean resultHashSetLength = containsDuplicate.hasDuplicateHashSetLength(nums);
+        boolean res = containsDuplicate.hasDuplicateSolution(nums);
         System.out.println(resultBruteForce + " Time Complexity : O(n²) - Space Complexity : O(1)"); 
         System.out.println(resultSort  + " Time Complexity : O(nlogn) - Space Complexity : O(1) or O(n) depends (sorting algorithm type)"); 
-        System.out.println(result + " Time Complexity : O(n) - Space Complexity : O(n)"); 
-        System.out.println(resultHashSetLength + " Time Complexity : O(n) - Space Complexity : O(n)"); 
+        System.out.println(result + " Time Complexity : O(n) - Space Complexity : O(n)");
+        System.out.println(resultHashSetLength + " Time Complexity : O(n) - Space Complexity : O(n)");
+        System.out.println(res + " Time Complexity : 0(n) - Space Complexity : O(n)");
     }
 }
