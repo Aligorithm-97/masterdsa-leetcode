@@ -21,6 +21,8 @@ public class javaUsage {
 
         int[] numT = new int[26];
 
+        int[][] twoD = new int[numT.length][2];
+
         // Set
 
         Set<Integer> setT = new HashSet<>();
@@ -64,6 +66,11 @@ public class javaUsage {
         }
 
         mapP.equals(mapL);
+
+
+        // Two Pointer
+
+
 
     }
 }
