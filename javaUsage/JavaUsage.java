@@ -86,7 +86,10 @@ public class JavaUsage {
 
         mapP.equals(mapL);
 
+        Map<String,List<String>> res = new HashMap<>();
 
+        res.putIfAbsent("sortedS",new ArrayList<>());
+        res.get("sortedS").add("s");
         // Two Pointer
 
         JavaUsage javaUsage = new JavaUsage();
