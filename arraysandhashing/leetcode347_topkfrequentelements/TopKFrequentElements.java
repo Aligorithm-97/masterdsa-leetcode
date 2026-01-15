@@ -1,4 +1,4 @@
-package leetcode347_topkfrequentelements;
+package arraysandhashing.leetcode347_topkfrequentelements;
 
 import java.util.*;
 

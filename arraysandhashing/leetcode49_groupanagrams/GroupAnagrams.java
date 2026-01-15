@@ -1,4 +1,4 @@
-package leetcode49_groupanagrams;
+package arraysandhashing.leetcode49_groupanagrams;
 
 import java.util.*;
 

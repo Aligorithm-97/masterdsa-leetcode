@@ -1,4 +1,4 @@
-package leetcode242_validanagram;
+package arraysandhashing.leetcode242_validanagram;
 
 import java.util.Arrays;
 import java.util.HashMap;

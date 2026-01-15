@@ -1,4 +1,4 @@
-package leetcode238_productofarrayexceptself;
+package arraysandhashing.leetcode238_productofarrayexceptself;
 
 import java.util.Arrays;
 

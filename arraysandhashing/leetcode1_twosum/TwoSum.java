@@ -1,4 +1,4 @@
-package leetcode1_twosum;
+package arraysandhashing.leetcode1_twosum;
 
 import java.util.Arrays;
 import java.util.Comparator;

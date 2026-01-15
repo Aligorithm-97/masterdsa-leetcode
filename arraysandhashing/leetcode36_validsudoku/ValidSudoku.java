@@ -1,4 +1,4 @@
-package leetcode36_validsudoku;
+package arraysandhashing.leetcode36_validsudoku;
 
 import java.util.HashMap;
 import java.util.HashSet;

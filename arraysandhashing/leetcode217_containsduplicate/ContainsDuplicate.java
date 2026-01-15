@@ -1,4 +1,4 @@
-package leetcode217_containsduplicate;
+package arraysandhashing.leetcode217_containsduplicate;
 
 import java.util.Arrays;
 import java.util.HashSet;
