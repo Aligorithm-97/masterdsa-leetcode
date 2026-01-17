@@ -27,13 +27,20 @@ public class ValidParentheses {
         return stack.isEmpty();
     }
 
+    public boolean isValidBrute(String s) {
+        while (s.contains("()") || s.contains("[]") || s.contains("{}")) {
+            s = s.replace("()", "").replace("[]", "").replace("{}", "");
+        }
+        return s.isEmpty();
+    }
 
 
 
     public static void main(String[] args) {
 
         ValidParentheses solution = new ValidParentheses();
-        System.out.println(solution.isValidStack("([)]"));
+        System.out.println(solution.isValidStack("({[]})"));
+        System.out.println(solution.isValidBrute("({[]})"));
 
     }
 }
