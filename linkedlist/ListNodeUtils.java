@@ -7,7 +7,7 @@ public final class ListNodeUtils {
         public ListNodeUtils.ListNode next;
         ListNode() {}
         public ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNodeUtils.ListNode next) {
+        public ListNode(int val, ListNodeUtils.ListNode next) {
             this.val = val;
             this.next = next;
         }
